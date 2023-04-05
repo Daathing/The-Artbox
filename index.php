@@ -9,7 +9,17 @@
     <title>The ArtBox</title>
 </head>
 <body>
-    <?php include('header.php'); ?>
+    <?php 
+    include('header.php');
+    /* include('oeuvres.php');
+    foreach($oeuvres as $oeuvre) {
+        if ($oeuvre == 0)
+        echo $oeuvre['picture'];
+        echo $oeuvre['title'];
+        echo $oeuvre['artist'];
+        break;
+    } */
+    ?>
     <main>
         <div id="liste-oeuvres">
             <article class="oeuvre">
