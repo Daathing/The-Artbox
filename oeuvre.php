@@ -19,7 +19,7 @@
         $infos = $oeuvres[$key];
                 echo   '<article id="detail-oeuvre">
                             <div id="img-oeuvre">
-                                <img src="'.$infos['picture'].'">
+                                <img src="img/'.$infos['picture'].'" alt="'.$infos['alt'].'">
                             </div>
                             <div id="contenu-oeuvre">
                                 <h1>'.$infos['title'].'</h1>

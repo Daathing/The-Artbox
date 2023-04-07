@@ -19,7 +19,7 @@
                 foreach($oeuvres as $key => $infos) {
                     echo   '<article class="oeuvre">
                                     <a href="oeuvre.php?id='.$key.'"> 
-                                        <img src="'.$infos['picture'].'">
+                                        <img src="img/'.$infos['picture'].'" alt="'.$infos['alt'].'">
                                         <h2> '.$infos['title'].' </h2>
                                         <p class="description"> '.$infos['artist'].' </p>
                                     </a>
