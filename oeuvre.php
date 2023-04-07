@@ -15,22 +15,19 @@
     ?>
 <main>
     <?php 
-        $keys = $_GET['id']; 
-            foreach ($oeuvres as $infos) {
-                if ($infos['id'] == $keys) {
-                    echo   '<article id="detail-oeuvre">
-                                <div id="img-oeuvre">
-                                    '.$infos['picture'].'
-                                </div>
-                                <div id="contenu-oeuvre">
-                                    <h1>'.$infos['title'].'</h1>
-                                    <p class="description">'.$infos['artist'].'</p>
-                                    <p class="description-complete">'.$infos['description'].'</p>
-                                </div>
-                            </article>';
-                    break;
-                };
-            };
+        $key = $_GET['id']; 
+        $infos = $oeuvres[$key];
+                echo   '<article id="detail-oeuvre">
+                            <div id="img-oeuvre">
+                                <img src="'.$infos['picture'].'">
+                            </div>
+                            <div id="contenu-oeuvre">
+                                <h1>'.$infos['title'].'</h1>
+                                <p class="description">'.$infos['artist'].'</p>
+                                <p class="description-complete">'.$infos['description'].'</p>
+                            </div>
+                        </article>';
+         
     ?>
 </main>
     <?php include('footer.php'); ?>
