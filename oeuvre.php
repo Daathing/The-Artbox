@@ -9,31 +9,31 @@
     <title>The ArtBox</title>
 </head>
 <body>
-<?php include('header.php'); ?>
+    <?php 
+        include('header.php'); 
+        include_once('oeuvres.php');
+    ?>
 <main>
-    <article id="detail-oeuvre">
-        <div id="img-oeuvre">
-            <?php 
-                include('oeuvres.php');
-                foreach($oeuvres as $infos) {
-                echo $oeuvre1['picture'];
-                break;
-            }
-            ?>
-        </div>
-        <div id="contenu-oeuvre">
-            <?php
-                include('oeuvres.php');
-                foreach($oeuvres as $infos) {
-                echo $oeuvre1['title'];
-                echo $oeuvre1['artist'];
-                echo $oeuvre1['description'];
-                break;
-            }
-            ?>
-        </div>
-    </article>
+    <?php 
+        $keys = $_GET['id']; 
+            foreach ($oeuvres as $infos) {
+                if ($infos['id'] == $keys) {
+                    echo   '<article id="detail-oeuvre">
+                                <div id="img-oeuvre">
+                                    '.$infos['picture'].'
+                                </div>
+                                <div id="contenu-oeuvre">
+                                    <h1>'.$infos['title'].'</h1>
+                                    <p class="description">'.$infos['artist'].'</p>
+                                    <p class="description-complete">'.$infos['description'].'</p>
+                                </div>
+                            </article>';
+                    break;
+                };
+            };
+    ?>
 </main>
-<?php include('footer.php'); ?>
+    <?php include('footer.php'); ?>
 </body>
-</html>
+</html>        
+                        

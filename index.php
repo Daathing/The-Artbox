@@ -16,17 +16,17 @@
     <main>
         <div id="liste-oeuvres">
             <?php
-                foreach($oeuvres as $infos) {
+                foreach($oeuvres as $key => $infos) {
                     echo   '<article class="oeuvre">
-                                    <a href="oeuvre.php?id=KEY">
+                                    <a href="oeuvre.php?id='.$key.'"> 
                                         '.$infos['picture'].'
                                         <h2> '.$infos['title'].' </h2>
                                         <p class="description"> '.$infos['artist'].' </p>
                                     </a>
-                                <a href="oeuvre.php?$oeuvre1"></a>
+                                <a href="oeuvre.php"></a>
                             </article>';
-                }
-            ?>
+                };
+            ?>    
         </div>
     </main>
     <?php include('footer.php'); ?>
